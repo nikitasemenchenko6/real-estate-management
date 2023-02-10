@@ -22,9 +22,9 @@ export class MapPage implements OnInit {
 
   setVisibleMarkerType(event: { type: string; isChecked: boolean }) {
     if (!event.isChecked) {
-      this.visibleType = this.visibleType.filter(v => v !== event.type);
+      this.visibleType = this.visibleType.filter(v => v !== event.type)
     } else {
-      this.visibleType = [...this.visibleType, event.type];
+      this.visibleType = [...this.visibleType, event.type]
     }
   }
 }
