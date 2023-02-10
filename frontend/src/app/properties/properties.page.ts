@@ -68,16 +68,16 @@ export class PropertiesPage implements OnInit {
         message: 'Please sign in, to continue',
         duration: 3000,
         color: 'danger'
-      }).then(toast => toast.present());
+      }).then(toast => toast.present())
       return;
     }
     const modalPropertiesNew = await this.modalController.create({
       component: PropertiesNewComponent
     });
     await modalPropertiesNew.present();
-    const { data } = await modalPropertiesNew.onDidDismiss();
+    const { data } = await modalPropertiesNew.onDidDismiss()
     if (data) {
-      this.presentUploadModal(data);
+      this.presentUploadModal(data)
     }
   }
 
